@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="description" content="Responsive Web Design Formula for fluid layout, it creates percentage based layout">
+<meta name="keywords" content="responsive design, Responsive Web Design Formula, Percentage Calculator, formula with percentage, responsive fluid grid, Author Sameera Thilakasiri">
+<title>Responsive Web Design Formula for Percentage - Easy Calculator</title>
+<link rel="stylesheet" type="text/css" href="Responsive%20Web%20Design%20Formula%20for%20Percentage%20-%20Easy%20Calculator_files/default.css">
+</head>
+
+<body>
+<h1>Responsive Web Design Formula</h1>
+ It's actually pretty easy with "the magic formula".
+<h2>target ÷ context = result</h2>
+We just enhance the formula with percentage, as follows
+<h2>(target / context) x 100 = result %</h2>
+You get the result in percentage,
+<br>ex:-<br>
+(900 / 960) x 100 = 93.75%
+<br><br>
+Note:- decimal numbers acording to maijor browsers<br>
+<table border="0" cellpadding="3" cellspacing="3" width="600">
+  <tbody><tr>
+    <td width="225"><strong>Browser</strong></td>
+    <td width="352"><strong>Value</strong></td>
+  </tr>
+  <tr>
+    <td>Firefox</td>
+    <td>Two decimals</td>
+  </tr>
+  <tr>
+    <td>Internet Explorer - IE</td>
+    <td>Four decimals</td>
+  </tr>
+</tbody></table>
+<br><br>
+
+<h3>Lets start use the formula</h3>
+<table border="0" cellpadding="3" cellspacing="3" width="600">
+  <tbody><tr>
+    <td width="220">&nbsp;</td>
+    <td width="345">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Target value</td>
+    <td><input id="target" type="text"><span id="error-target">Add target value</span></td>
+  </tr>
+  <tr>
+    <td>Context value</td>
+    <td><input id="context" type="text"><span id="error-context">Add context value</span></td>
+  </tr>
+  <tr>
+    <td>Yes, its percentage</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td align="right">Calculate </td>
+    <td><input id="calc" value="Calculate" type="button"></td>
+  </tr>
+  <tr>
+    <td align="right">Percentage  value</td>
+    <td><input id="answer" type="text"></td>
+  </tr>
+</tbody></table>
+
+<br><br>
+Consider  the following mock-up, let's  start convert that to CSS, to create responsive fluid grid.<br>
+<figure title="responsive design mock-up">
+  <img src="Responsive%20Web%20Design%20Formula%20for%20Percentage%20-%20Easy%20Calculator_files/Responsive-Web-Design-Formula.jpg" alt="responsive design mock-up" height="400" width="450">
+</figure>
+<br><br>
+
+wrapper style
+<code>
+<span class="secector">#wrapper</span><span class="separator">{</span><br>
+  <span class="property">margin</span><span class="separator">: </span><span class="value">0 auto</span><span class="separator">;</span><br>
+  <span class="property">width</span><span class="separator">: </span><span class="value">960px</span><span class="separator">;</span><span class="comment">/* 900 / 960 */</span><br>
+<span class="separator">} </span>
+</code>
+<br><br>
+container style
+<code>
+<span class="secector">#container</span><span class="separator">{</span><br>
+  <span class="property">margin</span><span class="separator">: </span><span class="value">0 auto</span><span class="separator">;</span><br>
+  <span class="property">width</span><span class="separator">: </span><span class="value">93.75%</span><span class="separator">;</span><span class="comment">/* 900 / 960 */</span><br>
+<span class="separator">} </span>
+</code>
+<br><br>
+main style
+<code>
+<span class="secector">#main</span><span class="separator">{</span><br>
+  <span class="property">float</span><span class="separator">: </span><span class="value">left</span><span class="separator">;</span><br>
+  <span class="property">width</span><span class="separator">: </span><span class="value">72.22222%</span><span class="separator">;</span><span class="comment">/* 650 / 900 */</span><br>
+<span class="separator">} </span>
+</code>
+<br><br>
+side style
+<code>
+<span class="secector">#side</span><span class="separator">{</span><br>
+  <span class="property">float</span><span class="separator">: </span><span class="value">right</span><span class="separator">;</span><br>
+  <span class="property">width</span><span class="separator">: </span><span class="value">23.8888%</span><span class="separator">;</span><span class="comment">/* 215 / 900 */</span><br>
+<span class="separator">} </span>
+</code>
+<br><br>
+<p class="abt-author">Author<br><img src="Responsive%20Web%20Design%20Formula%20for%20Percentage%20-%20Easy%20Calculator_files/sameera-thilakasiri.jpg" alt="Sameera Thilakasiri" height="44" width="44">
+<a href="https://plus.google.com/111681059766080908127?rel=author" rel="publisher" class="url">By Sameera Thilakasiri</a><br>
+He is a website designer based in Colombo. He is blogging technical articles while his leisure.<br>
+Follow Me at <a href="http://twitter.com/sameerast">Twitter</a> and <a href="https://plus.google.com/111681059766080908127?rel=author">Google+</a> and check out my <a href="http://www.sameerast.com/">blog</a>.</p>
+
+
+<script type="text/javascript" src="Responsive%20Web%20Design%20Formula%20for%20Percentage%20-%20Easy%20Calculator_files/jquery-1.js"></script> 
+<script>	
+	$('#calc').click(function(){
+		checkValidation()		
+	})
+	
+	$('#target, #context').keyup(function(){
+		checkValidation();
+	});
+	
+	function checkValidation() {
+		var target = $('#target').val();
+		var context = $('#context').val();		
+		if(target == ''){
+			$('#error-target').fadeIn('show');
+		}
+		
+		if(context == ''){
+			$('#error-context').fadeIn('show');
+		}
+		
+		if(target != ''){
+			$('#error-target').fadeOut('show');
+		}
+		
+		if(context != ''){
+			$('#error-context').fadeOut('show');
+		}	
+		if(context != '' && target !=''){
+			var answer = (target/context)*100;
+			var anserNew=answer.toPrecision(6);
+			$('#answer').val(anserNew+'%');
+		}
+	}
+	$('#answer').click(function(){
+		this.select();
+	})
+	
+</script>
+
+</body></html>

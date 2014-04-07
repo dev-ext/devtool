@@ -1,0 +1,61 @@
+a{ text-decoration:none; color:#00528e;}
+a:hover{ text-decoration:underline; color:#443390;}
+
+img{ border:0; display:block; max-width:100%}
+
+/* clearing float */
+.clear-float:before, .clear-float:after { content:""; display:table;}
+.clear-float:after { clear:both;}
+.clear-float { zoom:1; clear:right;}
+
+/* font size and decorative */
+body { font:1em Georgia, "Times New Roman", Times, serif; background-color:#edf0f2;} /*1em = 16px*/
+
+h2, h3{ font-weight:400;}
+h1 { font-size:1.75em;}
+h2 { font-size:1.5em;}
+h3 { font-size:1em;}
+/*	to anable accesibility	*/
+.abt-txt {position:absolute; left:-2000em;}	
+
+table, td {border-collapse:collapse; border:#CCC solid 1px;}
+
+/*	code highlight	*/
+
+
+
+code {
+	background-color: #141414; 
+	padding: 10px 5px; 
+	-moz-border-radius: 6px; 
+	-webkit-border-radius: 6px; 
+	border-radius: 6px;
+	-webkit-box-shadow: 1px 1px 2px 2px #ccc;
+	box-shadow: 1px 1px 2px 2px #ccc;	
+	display:block;
+}
+
+.secector {
+	color:#7587A6;
+}
+
+.property {
+	color:#CDA869;
+	margin-left:20px;
+}
+
+.value {
+	color: #CF6A4C;
+}
+
+.comment {
+	color: #5F5A60;
+    font-style: italic;
+}
+
+.separator {
+	color:#F8F8F8;
+}
+
+/*	form validation	*/
+#error-target, #error-context {display:none; margin-left:10px; color:#F00;}
